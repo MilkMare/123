@@ -9,12 +9,10 @@ def start(update, context):
 
     user_info = update.message.from_user.to_dict()
 
-    context.bot.send_message(
+    context.bot.send_message()
         chat_id=TELEGRAM_SUPPORT_CHAT_ID,
-        text=f"""
-Новый пользователь запустил бота!{username}".
-        """,
-    )
+        text=У нас новый пользователь f"{user_id}"
+
 
 
 def forward_to_chat(update, context):
