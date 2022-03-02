@@ -1,4 +1,6 @@
 import os
+import telebot
+from telebot import types
 from telegram.ext import CommandHandler, MessageHandler, Filters
 
 from settings import WELCOME_MESSAGE, TELEGRAM_SUPPORT_CHAT_ID, REPLY_TO_THIS_MESSAGE, WRONG_REPLY
@@ -12,11 +14,16 @@ def start(update, context):
     context.bot.send_message(
         chat_id=TELEGRAM_SUPPORT_CHAT_ID,
         text=f"""
-📞 Connected {username}.
+📞 Connected.
         """,
     )
 
 
+@bot.message_handler(commands=['Контакты'])
+def kontakt(message)
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    kontakt = types.KeyboardButton('Контакты')  
+    bot.send_message(message.chat.id, 'Администраторы канала - @milkmare @luubluue')
 def forward_to_chat(update, context):
     """{ 
         'message_id': 5, 
