@@ -12,9 +12,10 @@ def start(update, context):
     context.bot.send_message(
         chat_id=TELEGRAM_SUPPORT_CHAT_ID,
         text=f"""
-Новый пользователь запустил бота! username {}
+Новый пользователь запустил бота
         """,
     )
+    print("username{}". format(username))
 
 
 def forward_to_chat(update, context):
