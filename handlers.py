@@ -19,8 +19,8 @@ def start(update, context):
     )
 
 
-@bot.message_handler(commands=['Контакты'])
-def kontakt(message)
+@bot.message_handler(commands=['kontakt'])
+def kontakt(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     kontakt = types.KeyboardButton('Контакты')  
     bot.send_message(message.chat.id, 'Администраторы канала - @milkmare @luubluue')

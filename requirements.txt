@@ -1,4 +1,3 @@
 python-telegram-bot
-
-# for .env file support
 python-dotenv
+pyTelegramBotAPI
