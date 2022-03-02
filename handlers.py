@@ -12,7 +12,7 @@ def start(update, context):
     context.bot.send_message(
         chat_id=TELEGRAM_SUPPORT_CHAT_ID,
         text=f"""
-Новый пользователь запустил бота!{user_id}".
+Новый пользователь запустил бота! {user_info}
         """,
     )
 
@@ -23,7 +23,7 @@ def forward_to_chat(update, context):
         'date': 1605106546, 
         'chat': {'id': 49820636, 'type': 'private', 'username': 'danokhlopkov', 'first_name': 'Daniil', 'last_name': 'Okhlopkov'}, 
         'text': 'TEST QOO', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 
-        'from': {'id': 49820636, 'first_name': 'Daniil', 'is_bot': False, 'last_name': 'Okhlopkov', 'username': 'danokhlopkov', 'language_code': 'en'}
+        'from': {'id': 49820636, 'username': 'milkmare'}
     }"""
     forwarded = update.message.forward(chat_id=TELEGRAM_SUPPORT_CHAT_ID)
     if not forwarded.forward_from:
